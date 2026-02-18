@@ -99,41 +99,70 @@ h2 {
     letter-spacing: 0.02em;
 }
 
-/* Profile */
-.profile-text {
+/* Profile & Process Text */
+.profile-text,
+.process-text {
     font-size: 0.9375rem;
     color: #444;
     line-height: 1.7;
 }
 
-/* Capabilities Grid */
-.capabilities-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem 2rem;
+/* Rate Box */
+.rate-box {
+    background: rgba(0,0,0,0.02);
+    padding: 1.25rem 1.5rem;
+    border-left: 2px solid #d4d0c8;
 }
 
-.capability h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8125rem;
+.rate {
+    margin-bottom: 0.75rem;
+}
+
+.rate-amount {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #333;
-    margin-bottom: 0.25rem;
+    color: #1a1a1a;
 }
 
-.capability p {
+.rate-unit {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 0.125rem;
+}
+
+.rate-note {
     font-size: 0.8125rem;
     color: #666;
     line-height: 1.5;
+}
+
+/* Work List */
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.work-item strong {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.work-item p {
+    font-size: 0.8125rem;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Skills */
 .skills {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.625rem;
 }
 
 .skill-group {
@@ -152,40 +181,45 @@ h2 {
     color: #666;
 }
 
-/* Deployment Steps */
-.deployment-steps {
+/* Work History */
+.work-history {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
-.step {
+.work-entry {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e8e4de;
+}
+
+.work-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.work-header {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
 }
 
-.step-number {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.5rem;
+.work-header strong {
+    font-size: 0.9375rem;
     font-weight: 500;
-    color: #999;
-    min-width: 1.5rem;
-    line-height: 1;
+    color: #1a1a1a;
 }
 
-.step-content strong {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #333;
-    display: block;
-    margin-bottom: 0.125rem;
+.work-header span {
+    font-size: 0.8125rem;
+    color: #888;
 }
 
-.step-content p {
+.work-description {
     font-size: 0.8125rem;
     color: #666;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Contact Section */
@@ -217,6 +251,12 @@ h2 {
     border-color: #666;
 }
 
+.response-time {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 0.75rem;
+}
+
 /* Footer */
 .footer {
     text-align: center;
@@ -226,10 +266,6 @@ h2 {
     padding-top: 1.5rem;
     border-top: 1px solid #e8e4de;
     letter-spacing: 0.03em;
-}
-
-.footer .dot {
-    color: #ccc;
 }
 
 /* Responsive */
@@ -246,11 +282,6 @@ h2 {
         font-size: 2.25rem;
     }
     
-    .capabilities-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
     .skill-group {
         flex-direction: column;
         gap: 0.125rem;
@@ -258,6 +289,11 @@ h2 {
     
     .skill-category {
         min-width: auto;
+    }
+    
+    .work-header {
+        flex-direction: column;
+        gap: 0.125rem;
     }
 }
 
