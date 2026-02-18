@@ -99,42 +99,11 @@ h2 {
     letter-spacing: 0.02em;
 }
 
-/* Profile & Process Text */
-.profile-text,
-.process-text {
+/* Profile Text */
+.profile-text {
     font-size: 0.9375rem;
     color: #444;
     line-height: 1.7;
-}
-
-/* Rate Box */
-.rate-box {
-    background: rgba(0,0,0,0.02);
-    padding: 1.25rem 1.5rem;
-    border-left: 2px solid #d4d0c8;
-}
-
-.rate {
-    margin-bottom: 0.75rem;
-}
-
-.rate-amount {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #1a1a1a;
-}
-
-.rate-unit {
-    font-size: 1rem;
-    color: #666;
-    margin-left: 0.125rem;
-}
-
-.rate-note {
-    font-size: 0.8125rem;
-    color: #666;
-    line-height: 1.5;
 }
 
 /* Work List */
@@ -156,6 +125,65 @@ h2 {
     font-size: 0.8125rem;
     color: #666;
     line-height: 1.6;
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-item {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e8e4de;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.project-header strong {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.project-header a,
+.project-header span {
+    font-size: 0.75rem;
+    color: #888;
+    text-decoration: none;
+}
+
+.project-header a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.project-description {
+    font-size: 0.8125rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.project-description a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-color 0.2s;
+}
+
+.project-description a:hover {
+    border-color: #666;
 }
 
 /* Skills */
@@ -211,6 +239,17 @@ h2 {
     color: #1a1a1a;
 }
 
+.work-header strong a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-color 0.2s;
+}
+
+.work-header strong a:hover {
+    border-color: #666;
+}
+
 .work-header span {
     font-size: 0.8125rem;
     color: #888;
@@ -222,39 +261,45 @@ h2 {
     line-height: 1.6;
 }
 
-/* Contact Section */
-.section-contact {
-    text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e8e4de;
-}
-
-.section-contact p {
-    font-size: 0.875rem;
+.work-description a {
     color: #555;
-    margin-bottom: 0.5rem;
-}
-
-.contact-cta {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.125rem;
-}
-
-.contact-cta a {
-    color: #333;
     text-decoration: none;
     border-bottom: 1px solid #ccc;
     transition: border-color 0.2s;
 }
 
-.contact-cta a:hover {
+.work-description a:hover {
     border-color: #666;
 }
 
-.response-time {
-    font-size: 0.75rem;
-    color: #999;
-    margin-top: 0.75rem;
+/* CTA Section */
+.section-cta {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e8e4de;
+}
+
+.cta-text {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 0.125rem;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.cta-button:hover {
+    color: #666;
+    border-color: #666;
 }
 
 /* Footer */
@@ -291,7 +336,8 @@ h2 {
         min-width: auto;
     }
     
-    .work-header {
+    .work-header,
+    .project-header {
         flex-direction: column;
         gap: 0.125rem;
     }
