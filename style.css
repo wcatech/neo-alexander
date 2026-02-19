@@ -283,7 +283,27 @@ h2 {
     font-size: 0.875rem;
     color: #555;
     line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.pricing-hint {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
+}
+
+.price-tag {
+    font-size: 0.75rem;
+    color: #666;
+    background: #f5f3f0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.price-tag strong {
+    color: #1a1a1a;
 }
 
 .cta-button {
